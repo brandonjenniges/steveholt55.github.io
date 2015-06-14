@@ -1,0 +1,48 @@
+---
+layout: project
+---
+{% include head.html %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="modal-body">
+                <h2>{{ page.title }}</h2>
+                <hr class="star-primary">
+                <img src="../img/portfolio/{{ page.banner-img }}" class="img-responsive img-centered" alt="{{ page.alt }}">
+                <br>
+                <p>{{ page.description }}</p>
+
+                <ul class="list-inline item-details">
+                    <li>Platforms:
+                        <strong>{{ page.platforms }}</strong>
+                    </li>
+                </ul>
+
+                {% if page.appStoreHref or page.playStoreHref %}
+                <div class = "badgeContainer">
+
+                    <div class = "badgeCenter">
+                        {% if page.appStoreHref %}
+                        <a class = "playStoreBadge" href="{{ page.appStoreHref }}" target="itunes_store" >
+                            <img  class = "playStoreBadge" src="{{ page.appStoreImg }}"></a>
+                        </a>
+                        {% endif %}
+                        {% if page.playStoreHref %}
+                        <a  class = "playStoreBadge" href=" {{ page.playStoreHref }}">
+                            <img  class = "playStoreBadge"
+                                  src=" {{ page.playStoreImg }}"  />
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+
+    <div class="content" itemprop="articleBody" data-swiftype-index="true">
+        {{ content }}
+    </div>
+
+</div>

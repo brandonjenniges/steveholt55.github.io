@@ -1,0 +1,23 @@
+---
+layout: post
+---
+{% include head.html %} 
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <div>
+                <h2>{{ page.title }}</h2>
+                <hr class="star-primary">
+                <img src="../img/portfolio/{{ page.img }}" class="img-responsive img-centered" alt="{{ page.alt }}">
+                <p>{{ page.description }}</p>
+
+
+                <ul class="list-inline item-details">
+                    <li>Platforms:
+                        <strong>{{ page.platforms }}</strong>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
