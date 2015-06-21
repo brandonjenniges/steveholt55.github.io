@@ -14,7 +14,7 @@ contact: static
 color:
   primary: 0b61a4 #80B3FF
   secondary: 033e6b #FD6E8A
-  secondary-dark: 222222 #A2122F
+  secondary-dark: 36454F #A2122F
 
 # Footer settings
 footer:
@@ -39,7 +39,7 @@ address:
   - line: Minneapolis, MN
 
 # Credits content
-contact: 'Contact me on any of my profiles or directly here: <a href="mailto:brandon.jenniges@icloud.com">brandon.jenniges@icloud.com</a>'
+contact: '<a href="mailto:brandon.jenniges@icloud.com">brandon.jenniges@icloud.com</a>'
 
 # Build settings
 markdown: redcarpet

@@ -9,11 +9,11 @@ body {
 }
 
 p {
-    font-size: 20px;
+    font-size: 14px;
 }
 
 p.small {
-    font-size: 16px;
+    font-size: 12px;
 }
 
 a,
@@ -22,7 +22,7 @@ a:focus,
 a:active,
 a.active {
     outline: 0;
-    color: #{{ site.color.primary }};
+    color: #ffffff;;
 }
 
 h1,
@@ -31,48 +31,50 @@ h3,
 h4,
 h5,
 h6 {
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    font-family: 'San Francisco Display',sans-serif;
+    font-weight: 400;
     text-align: center;
+    color: #{{ site.color.secondary-dark }};
 }
 
+h1.star-light,
+h2.star-light,
+h3.star-light,
+h4.star-light,
+h5.star-light,
+h6.star-light {
+    color: #ffffff;
+}
+
+
 hr.star-light,
-hr.star-primary {
+hr.primary-sep {
     margin: 25px auto 30px;
     padding: 0;
-    max-width: 250px;
     border: 0;
-    border-top: solid 5px;
+    border-top: solid 2px;
     text-align: center;
 }
 
 hr.star-light:after,
-hr.star-primary:after {
-    content: "\f005";
+hr.primary-sep:after {
     display: inline-block;
     position: relative;
     top: -.8em;
     padding: 0 .25em;
-    font-family: FontAwesome;
     font-size: 2em;
 }
 
+hr.primary-sep {
+    border-color: #{{ site.color.secondary-dark }};
+}
 hr.star-light {
-    border-color: #fff;
+     border-color: #ffffff;
 }
 
-hr.star-light:after {
-    color: #fff;
-    background-color: #{{ site.color.primary }};
-}
 
-hr.star-primary {
-    border-color: #{{ site.color.secondary }};
-}
-
-hr.star-primary:after {
-    color: #{{ site.color.secondary }};
+hr.primary-sep:after {
+    color: #{{ site.color.secondary-dark }};
     background-color: #fff;
 }
 
@@ -98,10 +100,9 @@ header img {
 
 header .intro-text .name {
     display: block;
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'San Francisco Display',sans-serif;
+    font-weight: 400;
     font-size: 2em;
-    font-weight: 700;
 }
 
 header .intro-text .skills {
@@ -149,9 +150,8 @@ header .intro-text .skills {
 }
 
 .navbar {
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    font-family: 'San Francisco Display',sans-serif;
+    font-weight: 400;
 }
 
 .navbar a:focus {

@@ -1,23 +1,20 @@
 ---
 layout: project
 ---
+<!DOCTYPE html>
+<html>
 {% include head.html %}
-<div class="container">
+<body>
+{% include lite-nav.html %}
+<div class="container" style="padding-top: 100px">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
             <div class="modal-body">
                 <h2>{{ page.title }}</h2>
-                <hr class="star-primary">
-                <img src="../img/portfolio/{{ page.banner-img }}" class="img-responsive img-centered" alt="{{ page.alt }}">
                 <br>
                 <p>{{ page.description }}</p>
 
-                <ul class="list-inline item-details">
-                    <li>Platforms:
-                        <strong>{{ page.platforms }}</strong>
-                    </li>
-                </ul>
-
+                <br>
                 {% if page.appStoreHref or page.playStoreHref %}
                 <div class = "badgeContainer">
 
@@ -36,9 +33,9 @@ layout: project
                     </div>
                 </div>
                 {% endif %}
-
             </div>
         </div>
+
     </div>
 
     <div class="content" itemprop="articleBody" data-swiftype-index="true">
@@ -46,3 +43,6 @@ layout: project
     </div>
 
 </div>
+{% include footer.html %}
+</body>
+</html>
