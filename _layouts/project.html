@@ -3,46 +3,119 @@ layout: project
 ---
 <!DOCTYPE html>
 <html>
-{% include head.html %}
+{% include project-head.html %}
 <body>
-{% include lite-nav.html %}
-<div class="container" style="padding-top: 100px">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-            <div class="modal-body">
-                <h2>{{ page.title }}</h2>
-                <br>
-                <p>{{ page.description }}</p>
+<div id="skit-controller">
+    <div id="public-landing-page" class="template-2">
 
-                <br>
-                {% if page.appStoreHref or page.playStoreHref %}
-                <div class = "badgeContainer">
+        <section class="hero">
+            <div class="blurred-cover">
+                <div class="darken"></div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-5 col-xs-12 text-center">
+                        <img src="{{ page.banner-img }}"
+                             class="app-icon img-rounded">
+                    </div>
+                    <div class="col-sm-7 col-xs-12">
+                        <h1>{{ page.title }}</h1>
+                        <!--Tagline  <h2>  </h2> -->
 
-                    <div class = "badgeCenter">
-                        {% if page.appStoreHref %}
-                        <a class = "playStoreBadge" href="{{ page.appStoreHref }}" target="itunes_store" >
-                            <img  class = "playStoreBadge" src="{{ page.appStoreImg }}"></a>
-                        </a>
-                        {% endif %}
-                        {% if page.playStoreHref %}
-                        <a  class = "playStoreBadge" href=" {{ page.playStoreHref }}">
-                            <img  class = "playStoreBadge"
-                                  src=" {{ page.playStoreImg }}"  />
-                        </a>
+                        {% if page.appStoreHref or page.playStoreHref %}
+                        <div class="badgeContainer">
+
+                            <div class="badgeCenter">
+                                {% if page.appStoreHref %}
+                                <a class="app-store-badge" href="{{ page.appStoreHref }}" target="_blank">
+                                    <img src="{{ page.appStoreImg }}"></a>
+                                </a>
+                                {% endif %}
+                                {% if page.playStoreHref %}
+                                <a class="google-play-badge" href="_blank">
+                                    <img src=" {{ page.playStoreImg }}"/>
+                                </a>
+                                {% endif %}
+                            </div>
+                        </div>
                         {% endif %}
                     </div>
                 </div>
-                {% endif %}
             </div>
-        </div>
+        </section>
 
+        <section class="description">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-5 col-xs-12 pull-right">
+                        <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
+                            <div class="carousel-inner" role="listbox">
+                                {% for screenshot in page.screenshots %}
+
+                                <div class=" {{ screenshot.status }}">
+                                    <img src=" {{ screenshot.img }}"
+                                         class="screenshot" alt="Screenshot of {{ page.title }}">
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-7 col-xs-12 description-text">
+                        <p class="large">{{ page.description }}</p>
+
+                        <!-- Store badges -->
+                        {% if page.appStoreHref %}
+                        <a class="app-store-badge" href="{{ page.appStoreHref }}" target="_blank">
+                            <span class="store-badge-white-text">
+                                <img src="{{ page.appStoreWhiteImg }}">
+                            </span>
+                        </a>
+                        {% endif %}
+                        {% if page.playStoreHref %}
+                        <a class="google-play-badge" href="_blank">
+                              <span class="store-badge-white-text">
+                                  <img src=" {{ page.playStoreWhiteImg }}"/>
+                              </span>
+                        </a>
+                        {% endif %}
+                        <!-- End of Store badges -->
+
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-
-    <div class="content" itemprop="articleBody" data-swiftype-index="true">
-        {{ content }}
-    </div>
-
 </div>
-{% include footer.html %}
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script>
+    window.skit = (function() {
+        var objects = {};
+        var modules = {};
+        function define(resourcePath, deps, fn) {
+            modules[resourcePath] = {deps: deps, fn: fn};
+        }
+        function load(resourcePath) {
+            if (!(resourcePath in objects)) {
+                if (resourcePath in modules) {
+                    var module = modules[resourcePath];
+                    var args = [];
+                    for (var i = 0; i < module.deps.length; i++) {
+                        args.push(load(module.deps[i]));
+                    }
+                    objects[resourcePath] = module.fn.apply(window, args);
+                } else {
+                    objects[resourcePath] = null;
+                }
+            }
+            return objects[resourcePath];
+        }
+        return {define: define, load: load};
+    })();
+</script>
+<script src="https://d2kfjaekmjmy1l.cloudfront.net/screenshots-vdc1aeaae212a.js" data-bundle="screenshots"></script>
+
 </body>
 </html>
