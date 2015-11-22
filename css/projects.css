@@ -1,0 +1,23 @@
+.badgeContainer{
+    color: #ffffff;
+    height: 50px;
+    width: auto;
+
+}
+
+.badgeCenter {
+    display: inline;
+    width: 50%;
+}
+
+.playStoreBadge{
+    display: inline;
+    height: 30px;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.githubButton {
+    display: inline;
+    height: 30px;
+}

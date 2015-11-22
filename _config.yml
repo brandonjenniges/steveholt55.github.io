@@ -1,58 +1,56 @@
-# Site settings
+# ----------------------- #
+#      Main Configs       #
+# ----------------------- #
+
 title: Brandon Jenniges
 email: brandon.jenniges@icloud.com
 url: https://brandon-asahi.com
 permalink: /:title/
 baseurl: /brandon
+author: Brandon Jenniges
+description: > # "Write an awesome description for your new site here. 
+  You can edit this line in _config.yml. It will appear in your document 
+  head meta (for Google search results) and in your feed.xml site 
+  description.
+copyright: 'Copyright &copy; 2015 Brandon Jenniges.'
+credits: ' This site was created using a free to use, open source Jekyll theme called <a href="https://github.com/swcool/landing-page-theme">Landing Page</a> as a reference.'
 
-#description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
 
-# Contact form: comment the line below if you want to stick with the default PHP contact form
-contact: static
-
-# Color settings (hex-codes without the leading hash-tag)
-color:
-  primary: ffffff #80B3FF
-  secondary: a90c0c
-  secondary-dark: 7e0c0c
-
-# Footer settings
-footer:
-  copyright: Brandon Jenniges
-  location: Location
-  social: Social
-  contact: Contact
-
-# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
-social:
-  - title: linkedin
-    url: https://www.linkedin.com/pub/brandon-jenniges/58/a4a/9b9
-  - title: twitter
-    url: http://twitter.com/steveholt55
-  - title: stack-overflow
-    url: http://stackoverflow.com/users/1922313/brandon
-  - title: github
-    url: https://github.com/steveholt55
-
-# Postal address (add as many lines as necessary)
-address:
-  - line: Minneapolis, MN
-
-# Credits content
-contact: '<a href="mailto:brandon.jenniges@icloud.com">brandon.jenniges@icloud.com</a>'
+# ----------------------- #
+#    Jekyll & Plugins     #
+# ----------------------- #
 
 # Build settings
-markdown: redcarpet
+markdown: kramdown
+permalink: pretty
+
+# ----------------------- #
+#   3rd Party Settings    #
+# ----------------------- #
+
+social:
+  - title: github
+    url: https://github.com/steveholt55
+  - title: linkedin
+    url: http://linkedin.com/in/bjenniges
+  - title: stack-overflow
+    url: http://stackoverflow.com/users/1922313/brandon
+  - title: twitter
+    url: http://twitter.com/steveholt55
+
+# ----------------------- #
+#   Build Settings        #
+# ----------------------- #
 
 collections:
- portfolio:
-  output: true  
+ projects:
+  output: true
 
 
 defaults:
    -
     scope:
       path: ""
-      type: "portfolio"
+      type: "projects"
     values:
       layout: "project"

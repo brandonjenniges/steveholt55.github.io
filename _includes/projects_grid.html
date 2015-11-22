@@ -1,0 +1,95 @@
+<section id="projects">
+<!-- Page Content -->
+{% for project in site.projects %}
+  {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+    {% if thecycle == 'odd' %}
+    <div class="content-section-a">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <h2 class="section-heading">{{ project.title }}</h2>
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+
+                    {% if project.appStoreHref or project.playStoreHref %}
+                    <div class = "badgeContainer">
+                        <div class = "badgeCenter">
+                            {% if project.appStoreHref %}
+                            <a class = "playStoreBadge" href="{{ project.appStoreHref }}" target="itunes_store" >
+                                <img  class = "playStoreBadge" src="{{ project.appStoreImg }}">
+                            </a>
+                            {% endif %}
+                            {% if project.playStoreHref %}
+                            <a  class = "playStoreBadge" href=" {{ project.playStoreHref }}">
+                                <img  class = "playStoreBadge"
+                                      src=" {{ project.playStoreImg }}"  />
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endif %}
+                    <div class="lead">{{ project.content }}</div>
+                    {% if project.githubLink %}
+                    <a href="{{ project.githubLink }}" class="btn btn-default githubButton"><i class="fa fa-github fa-fw"></i>View on GitHub</a>
+                    {% endif %}
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <img class="img-responsive" src="img/projects/{{ project.img }}" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+    {% else %}
+
+    <div class="content-section-b">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <h2 class="section-heading">{{ project.title }}</h2>
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+
+                    {% if project.appStoreHref or project.playStoreHref %}
+                    <div class = "badgeContainer">
+                        <div class = "badgeCenter">
+                            {% if project.appStoreHref %}
+                            <a class = "playStoreBadge" href="{{ project.appStoreHref }}" target="itunes_store" >
+                                <img  class = "playStoreBadge" src="{{ project.appStoreImg }}">
+                            </a>
+                            {% endif %}
+                            {% if project.playStoreHref %}
+                            <a  class = "playStoreBadge" href=" {{ project.playStoreHref }}">
+                                <img  class = "playStoreBadge"
+                                      src=" {{ project.playStoreImg }}"  />
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endif %}
+                    <div class="lead">{{ project.content }}</div>
+                    {% if project.githubLink %}
+                    <a href="{{ project.githubLink }}" class="btn btn-default githubButton"><i class="fa fa-github fa-fw"></i>View on GitHub</a>
+                    {% endif %}
+
+                </div>
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                  <img class="img-responsive" src="img/projects/{{ project.img }}" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-b -->
+    {% endif %}
+{% endfor %}
+</section>
