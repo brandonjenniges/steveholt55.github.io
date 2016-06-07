@@ -8,7 +8,7 @@ appStoreHref: https://itunes.apple.com/us/app/football-college-trivia/id87987015
 appStoreImg: https://linkmaker.itunes.apple.com/htmlResources/assets/en_us//images/web/linkmaker/badge_appstore-lrg.svg
 
 playStoreHref : https://play.google.com/store/apps/details?id=com.college.football.trivia
-playStoreImg : ../brandon/img/play_store_badge.png
+playStoreImg : ../img/play_store_badge.png
 
 githubLink : https://github.com/steveholt55/Football-College-Trivia-iOS
 

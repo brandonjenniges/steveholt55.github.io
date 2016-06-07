@@ -8,7 +8,7 @@ appStoreHref: https://itunes.apple.com/us/app/rampaging-dragons/id846237154?mt=8
 appStoreImg: https://linkmaker.itunes.apple.com/htmlResources/assets/en_us//images/web/linkmaker/badge_appstore-lrg.svg
 
 playStoreHref : https://play.google.com/store/apps/details?id=com.fallinggame
-playStoreImg : ../brandon/img/play_store_badge.png
+playStoreImg : ../img/play_store_badge.png
 
 description: |
 ---

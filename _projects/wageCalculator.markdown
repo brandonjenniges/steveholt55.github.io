@@ -5,7 +5,7 @@ category: Projects
 title: Wage Calculator
 
 playStoreHref : https://play.google.com/store/apps/details?id=com.payboy.brandon
-playStoreImg : ../brandon/img/play_store_badge.png
+playStoreImg : ../img/play_store_badge.png
 
 githubLink : https://github.com/steveholt55/Wage-Calculator-Android
 

@@ -4,15 +4,14 @@
 
 title: Brandon Jenniges
 email: brandon.jenniges@icloud.com
-url: https://brandon-asahi.com
+url: https://brandonjenniges.me
 permalink: /:title/
-baseurl: /brandon
 author: Brandon Jenniges
 description: > # "Write an awesome description for your new site here. 
   You can edit this line in _config.yml. It will appear in your document 
   head meta (for Google search results) and in your feed.xml site 
   description.
-copyright: 'Copyright &copy; 2015 Brandon Jenniges.'
+copyright: 'Copyright &copy; 2016 Brandon Jenniges.'
 credits: ' This site was created using a free to use, open source Jekyll theme called <a href="https://github.com/swcool/landing-page-theme">Landing Page</a> as a reference.'
 
 
