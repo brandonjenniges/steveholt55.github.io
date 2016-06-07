@@ -1,4 +1,4 @@
-# brandonjenniges.me
+# [brandonjenniges.me](http://brandonjenniges.me)
 Personal Website created using [Landing Page](https://github.com/swcool/landing-page-theme) Jekyll theme.
 
 Jekyll
