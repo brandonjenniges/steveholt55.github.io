@@ -5,7 +5,7 @@ category: Projects
 title: Football College Trivia
 
 appStoreHref: https://itunes.apple.com/us/app/football-college-trivia/id879870156?mt=8
-appStoreImg: https://linkmaker.itunes.apple.com/htmlResources/assets/en_us//images/web/linkmaker/badge_appstore-lrg.svg
+appStoreImg: https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg
 
 playStoreHref : https://play.google.com/store/apps/details?id=com.college.football.trivia
 playStoreImg : ../img/play_store_badge.png
